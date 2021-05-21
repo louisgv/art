@@ -26,7 +26,7 @@ export default function FirstPost() {
         Why it's important to not procrastinate:
       </h2>
       <p>
-        So you don't have to
+        So you don't have to type meaningless stuff to reach
       </p>
     </Layout>
   )
