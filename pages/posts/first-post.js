@@ -27,7 +27,7 @@ export default function FirstPost() {
       </h2>
       <p>
         So you don't have to type meaningless stuff to reach
-        25 commits.
+        25 commits.I am writing random stuff.
       </p>
     </Layout>
   )
