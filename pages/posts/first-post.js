@@ -18,6 +18,9 @@ export default function FirstPost() {
       <p>
         Hello, this is my first post.
       </p>
+      <p>
+        Nothing to see here.
+      </p>
 
     </Layout>
   )
