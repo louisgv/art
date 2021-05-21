@@ -28,7 +28,7 @@ export default function FirstPost() {
       <p>
         So you don't have to type meaningless stuff to reach
         25 commits.I am writing random stuff. I won't reach
-        25 commits
+        25 commits because I ran out of time.
       </p>
     </Layout>
   )
