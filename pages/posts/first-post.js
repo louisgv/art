@@ -35,6 +35,9 @@ export default function FirstPost() {
       <h2>
         I hope I learned now to procrastinate.
       </h2>
+      <p>
+        But it's a hard habit to break.
+      </p>
     </Layout>
   )
 }
