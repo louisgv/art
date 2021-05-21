@@ -19,7 +19,7 @@ export default function FirstPost() {
         Hello, this is my first post.
       </p>
       <p>
-        Nothing to see here.
+        Nothing to see here. I am trying to get to 25 commit before 11:59PM.
       </p>
 
     </Layout>
