@@ -31,6 +31,10 @@ export default function FirstPost() {
         25 commits because I ran out of time. I did not make it in time but I will
         keep trying to make it to 25 commit before I sleep.
       </p>
+
+      <h2>
+        I hope I learned now to procrastinate.
+      </h2>
     </Layout>
   )
 }
