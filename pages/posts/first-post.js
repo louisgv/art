@@ -38,6 +38,7 @@ export default function FirstPost() {
       <p>
         But it's a hard habit to break. I will need to focus harder and
         try harder next time.
+        Tomorrow I will finish the next.js tutorial for sure.
       </p>
     </Layout>
   )
