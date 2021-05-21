@@ -21,6 +21,9 @@ export default function FirstPost() {
       <p>
         Nothing to see here. I am trying to get to 25 commit before 11:59PM.
       </p>
+      <h2>
+        Why it's important to not procrastinate:
+      </h2>
 
     </Layout>
   )
