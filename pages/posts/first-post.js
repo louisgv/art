@@ -40,6 +40,10 @@ export default function FirstPost() {
         try harder next time.
         Tomorrow I will finish the next.js tutorial for sure.
       </p>
+
+      <h2>
+        got 25 commit for tonight.
+      </h2>
     </Layout>
   )
 }
