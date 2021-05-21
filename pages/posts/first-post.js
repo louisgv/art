@@ -14,9 +14,11 @@ export default function FirstPost() {
           <a>Back to home</a>
         </Link>
       </h2>
+      <h1>Camilla's first post</h1>
       <p>
         Hello, this is my first post.
       </p>
+
     </Layout>
   )
 }
