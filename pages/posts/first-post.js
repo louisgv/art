@@ -14,6 +14,9 @@ export default function FirstPost() {
           <a>Back to home</a>
         </Link>
       </h2>
+      <p>
+        Hello, this is my first post.
+      </p>
     </Layout>
   )
 }
