@@ -3,18 +3,22 @@ import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 import { getSortedPostsData } from "../lib/posts";
+import { getUser } from "../lib/user";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
 
+  const allUsers = await getUser();
+
   return {
     props: {
       allPostsData,
+      allUsers,
     },
   };
 }
 
-export default function Home({ allPostsData }) {
+export default function Home({ allPostsData, allUsers }) {
   return (
     <Layout home>
       <Head>
@@ -46,6 +50,19 @@ export default function Home({ allPostsData }) {
               {id}
               <br />
               {date}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <h2 className={utilStyles.headingLg}>User</h2>
+        <ul className={utilStyles.list}>
+          {allUsers.map(({ name, email, id }) => (
+            <li className={utilStyles.listItem} key={email + id}>
+              {name}
+              <br />
+              {email}
             </li>
           ))}
         </ul>
