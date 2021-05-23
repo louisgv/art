@@ -4,6 +4,22 @@ import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 import { getSortedPostsData } from "../lib/posts";
 import { getUser } from "../lib/user";
+import useSWR from "swr";
+
+import { between } from "./api/randomid";
+
+// Static/compile time fetching
+// Data is at T1
+// dev compile the app ->
+//   app get static props data at T1
+// User request the app -> app serve T1
+
+// Data is at T2
+// User request the app -> app serve T1
+
+// Developer compile the app again ->
+//   app get static props data at T2
+//   User request the app -> app serve T2
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -14,17 +30,43 @@ export async function getStaticProps() {
     props: {
       allPostsData,
       allUsers,
+      number: between(-100, -200),
     },
   };
 }
 
-export default function Home({ allPostsData, allUsers }) {
+// Server fetching
+// Data is at T1
+// User request the app -> server fetch then serve data at T1
+
+// Data is at T2
+// User request the app -> server fetch then serve data at T2
+
+// export async function getServerSideProps(context) {
+//   return {
+//     props: {},
+//   };
+// }
+
+// Client fetching
+// Data is at T1
+// User request the app -> server fetch then serve data at T1
+
+// Data is at T2
+// User request the app -> server fetch then serve data at T2
+
+export default function Home({ allPostsData, allUsers, number }) {
+  const { data, revalidate } = useSWR("api/randomid");
   return (
     <Layout home>
       <Head>
-        <title>{siteTitle}</title>
+        <title>
+          {siteTitle} - {number}
+        </title>
       </Head>
       <section className={utilStyles.headingMd}>
+        <h2>Your lucky number is: {data?.number}</h2>
+        <button onClick={() => revalidate()}>Redraw</button>
         <p>
           Hello, I'm Camilla. I'm passionate about Web Development and
           Geogprahic Information Systems. I love coding in Javascript and Java.
