@@ -11,9 +11,9 @@ export default function Home() {
       </Head>
       <section className={utilStyles.headingMd}>
         <p>Hello, I'm Camilla. I'm passionate about Web Development and Geogprahic Information Systems.
-          I love coding in Javascript and Java.
+        I love coding in Javascript and Java.
         </p>
-        
+
         <p>
           (This is a sample website - you’ll be building a site like this on{' '}
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
@@ -22,9 +22,9 @@ export default function Home() {
       <h1 className="title">
         Go to{' '}
         <Link href="/posts/first-post">
-        <a>this page!</a>
-  </Link>
-</h1>
+          <a>this page!</a>
+        </Link>
+      </h1>
 
     </Layout>
   )
