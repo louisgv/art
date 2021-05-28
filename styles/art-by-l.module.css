@@ -7,6 +7,6 @@
     transform: rotateZ(0);
   }
   to {
-    transform: rotateZ(180deg);
+    transform: rotateZ(360deg);
   }
 }
