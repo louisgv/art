@@ -102,9 +102,11 @@ export default function Home({ allPostsData, allUsers, number }) {
         <ul className={utilStyles.list}>
           {allUsers.map(({ name, email, id }) => (
             <li className={utilStyles.listItem} key={email + id}>
-              {name}
-              <br />
-              {email}
+              <Link href={`/user/${email}`}>
+                <a>
+                  {name} | {email}
+                </a>
+              </Link>
             </li>
           ))}
         </ul>

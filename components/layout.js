@@ -7,7 +7,7 @@ import Link from "next/link";
 const name = "Camilla Chen";
 export const siteTitle = "Next.js Sample Website";
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, hideAvatar = false }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -28,30 +28,35 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
-            <Image
-              priority
-              src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
-              height={200}
-              width={200}
-              alt={name}
-            />
+            {!hideAvatar && (
+              <Image
+                priority
+                src="/images/profile.jpg"
+                className={utilStyles.borderCircle}
+                height={200}
+                width={200}
+                alt={name}
+              />
+            )}
+
             <h1 className={utilStyles.heading2X1}>{name}</h1>
           </>
         ) : (
           <>
-            <Link href="/">
-              <a>
-                <Image
-                  priority
-                  src="/images/profile.jpg"
-                  className={utilStyles.borderCircle}
-                  height={108}
-                  width={108}
-                  alt={name}
-                />
-              </a>
-            </Link>
+            {!hideAvatar && (
+              <Link href="/">
+                <a>
+                  <Image
+                    priority
+                    src="/images/profile.jpg"
+                    className={utilStyles.borderCircle}
+                    height={108}
+                    width={108}
+                    alt={name}
+                  />
+                </a>
+              </Link>
+            )}
             <h2 className={utilStyles.headingLg}>
               <Link href="/">
                 <a className={utilStyles.colorInherit}>{name}</a>
