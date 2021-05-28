@@ -65,19 +65,12 @@ export default function Home({ allPostsData, allUsers, number }) {
         </title>
       </Head>
       <section className={utilStyles.headingMd}>
-<<<<<<< HEAD
-        <p>Hello, I'm Camilla. I'm passionate about Web Development and Geogprahic Information Systems.
-        I love coding in Javascript and Java.
-        </p>
-
-=======
         <h2>Your lucky number is: {data?.number}</h2>
         <button onClick={() => revalidate()}>Redraw</button>
         <p>
           Hello, I'm Camilla. I'm passionate about Web Development and
           Geogprahic Information Systems. I love coding in Javascript and Java.
         </p>
->>>>>>> de4442d54b6546ad19787c6d31c7f84042fb10fd
         <p>
           (This is a sample website - you’ll be building a site like this on{" "}
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
@@ -89,8 +82,6 @@ export default function Home({ allPostsData, allUsers, number }) {
           <a>this page!</a>
         </Link>
       </h1>
-<<<<<<< HEAD
-=======
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
@@ -105,7 +96,6 @@ export default function Home({ allPostsData, allUsers, number }) {
           ))}
         </ul>
       </section>
->>>>>>> de4442d54b6546ad19787c6d31c7f84042fb10fd
 
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>User</h2>
