@@ -1,6 +1,6 @@
 import { ArtCanvas } from "components/art-canvas";
 import Layout from "components/layout";
-import { LABSignature } from "components/signature";
+import { OrangePurpleSignature } from "components/signature";
 import styled from "@emotion/styled";
 
 const CanvasObject = styled.div`
@@ -83,7 +83,7 @@ export default function Planets() {
       <ArtCanvas background={canvasBackground}>
         <Uranus />
 
-        <LABSignature />
+        <OrangePurpleSignature />
       </ArtCanvas>
     </Layout>
   );

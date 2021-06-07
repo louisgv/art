@@ -3,7 +3,7 @@ import { Donut } from "features/donuts/donut";
 import Layout from "components/layout";
 
 import { ArtCanvas } from "components/art-canvas";
-import { LABSignature } from "components/signature";
+import { OrangePurpleSignature } from "components/signature";
 
 export default function Donuts() {
   const canvasBackground = "whitesmoke";
@@ -11,7 +11,7 @@ export default function Donuts() {
   return (
     <Layout hideAvatar name="Donuts">
       <ArtCanvas>
-        <LABSignature />
+        <OrangePurpleSignature />
 
         <Donut noSprinkle canvasBackground={canvasBackground} />
         <Donut
