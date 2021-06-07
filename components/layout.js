@@ -1,16 +1,15 @@
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
-import Image from "next/image";
 import Head from "next/head";
 import Link from "next/link";
 
-const name = "Camilla Chen";
-export const siteTitle = "Next.js Sample Website";
+export const siteTitle = "Arts";
 
-export default function Layout({ children, home, hideAvatar = false }) {
+export default function Layout({ children, home, name = "Art Gallery" }) {
   return (
     <div className={styles.container}>
       <Head>
+        <title>{siteTitle}</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
@@ -28,35 +27,10 @@ export default function Layout({ children, home, hideAvatar = false }) {
       <header className={styles.header}>
         {home ? (
           <>
-            {!hideAvatar && (
-              <Image
-                priority
-                src="/images/profile.jpg"
-                className={utilStyles.borderCircle}
-                height={200}
-                width={200}
-                alt={name}
-              />
-            )}
-
             <h1 className={utilStyles.heading2X1}>{name}</h1>
           </>
         ) : (
           <>
-            {!hideAvatar && (
-              <Link href="/">
-                <a>
-                  <Image
-                    priority
-                    src="/images/profile.jpg"
-                    className={utilStyles.borderCircle}
-                    height={108}
-                    width={108}
-                    alt={name}
-                  />
-                </a>
-              </Link>
-            )}
             <h2 className={utilStyles.headingLg}>
               <Link href="/">
                 <a className={utilStyles.colorInherit}>{name}</a>
