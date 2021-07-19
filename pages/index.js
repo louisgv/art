@@ -13,6 +13,9 @@ export default function Home() {
           <li>
             <Link href="/arts/planets">Planets</Link>
           </li>
+          <li>
+            <Link href="/arts/mobius-strip">Mobius Strip</Link>
+          </li>
         </ul>
       </section>
     </Layout>
