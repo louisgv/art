@@ -45,12 +45,15 @@ const Box = styled.div`
 const OrangeBox = styled(Box)`
   background-color: orange;
 `;
-const RedBox = styled(Box)`
-  background-color: red;
-`;
+
 const PurpleBox = styled(Box)`
   background-color: purple;
 `;
+
+const CyanBox = styled(Box)`
+  background-color: cyan;
+`;
+
 export default function MobiusStrip() {
   const canvasRef = useRef(null);
 
@@ -65,8 +68,8 @@ export default function MobiusStrip() {
       <ArtCanvas>
         <FlexBoxContainer>
           <OrangeBox />
-          <RedBox />
           <PurpleBox />
+          <CyanBox />
         </FlexBoxContainer>
 
         {/* <canvas style={{ width: "100%", height: "100%" }} ref={canvasRef} /> */}
