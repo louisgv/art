@@ -26,6 +26,8 @@ const FlexBoxContainer = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  overflow: scroll;
+  height: 100%;
 `;
 
 const Box = styled.div`
@@ -38,6 +40,10 @@ const Box = styled.div`
   height: 300px;
   border-radius: 12px;
   /* padding: 12px; */
+
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
 
   margin: 8px;
 `;
@@ -81,9 +87,20 @@ export default function MobiusStrip() {
     <Layout hideAvatar name="Mobius Strip">
       <ArtCanvas>
         <FlexBoxContainer>
-          <OrangeBox />
+          {/* <OrangeBox />
           <PurpleBox />
-          <CyanBox />
+          <CyanBox /> */}
+
+          {colorBoxes.map(({ color, number }, i) => (
+            <Box
+              key={number + "-" + i}
+              style={{
+                backgroundColor: color,
+              }}
+            >
+              {number}
+            </Box>
+          ))}
         </FlexBoxContainer>
 
         {/* <canvas style={{ width: "100%", height: "100%" }} ref={canvasRef} /> */}
