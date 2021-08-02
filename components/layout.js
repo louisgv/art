@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const siteTitle = "Arts";
 
-export default function Layout({ children, home, name = "Art Gallery" }) {
+export default function Layout({ children, home, name = "Home" }) {
   return (
     <div className={styles.container}>
       <Head>
