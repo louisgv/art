@@ -42,6 +42,20 @@ const Box = styled.div`
   margin: 8px;
 `;
 
+// an array of objects that represent a random color and a random number between 1 and 200
+const colorBoxes = [
+  { color: "red", number: 1 },
+  { color: "orange", number: 2 },
+  { color: "yellow", number: 3 },
+  { color: "green", number: 4 },
+  { color: "blue", number: 5 },
+  { color: "purple", number: 6 },
+  { color: "pink", number: 7 },
+  { color: "black", number: 8 },
+  { color: "white", number: 9 },
+  { color: "gray", number: 10 },
+];
+
 const OrangeBox = styled(Box)`
   background-color: orange;
 `;
